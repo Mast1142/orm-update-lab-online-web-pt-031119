@@ -71,6 +71,5 @@ attr_accessor :name, :grade, :id
     #binding.pry
       self.new_from_db(row)
     end
-    self.name
   end
 end
