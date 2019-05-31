@@ -67,7 +67,7 @@ attr_accessor :name, :grade, :id
       FROM students
       WHERE name = ?
       SQL
-    DB[:conn].execute(sql).map do |row|
+    DB[:conn].execute(sql, name).map do |row|
       binding.pry
       self.new_from_db(row)
     end
