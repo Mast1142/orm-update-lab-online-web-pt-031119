@@ -69,7 +69,7 @@ attr_accessor :name, :grade, :id
       SQL
     DB[:conn].execute(sql, name).map do |row|
     #binding.pry
-      self.new_from_db(row)
+      self.new_from_db.name(row)
     end
   end
 end
