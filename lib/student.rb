@@ -54,8 +54,8 @@ attr_reader :id
   end
 
   def self.new_from_db(row)
-    #binding.pry
     new_student = self.new
+    binding.pry
     new_student.id = row[0]
     new_student.name = row[1]
     new_student.grade = row[2]
