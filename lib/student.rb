@@ -42,6 +42,11 @@ attr_reader :id
     end
   end
 
+  def update
+    sql = "UPDATE students SET name = ?, grade = ? WHERE name = ?"
+    DB[:conn].execute(sql, self.name, self.grade, self.name)
+  end
+
   def self.create(name:, grade:)
     student = student.new(name,grade)
     student.save
